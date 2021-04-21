@@ -1,0 +1,13 @@
+:root{
+    --clr-primary: ;
+
+    --clr-base-white: hsl (0, 0%, 100%);
+    --clr-base-black: hsl (0, 100%, 100%);
+
+    --ff-primary: 'Manrope', sans-serif;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
