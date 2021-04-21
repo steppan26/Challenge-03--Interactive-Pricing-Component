@@ -7,35 +7,41 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
-  
+
   <title>Frontend Mentor | Interactive pricing component</title>
 
 </head>
 <body>
-  <div class="wrapper">
-    <div class="heading">
-      <h3>Simple, traffic-based pricing</h3>
+    <section class="heading">
+      <h2>Simple, traffic-based pricing</h2>
       <p>Sign-up for our 30-day trial. No credit card required.</p>
-    </div>
-    <section class="card">
-      <p class="pageviews">Pageviews</p>
-      <h2 class="price">$ /month</h2>
-      <div class="pricingOption">
-        <p>Monthly Billing</p>
-        <p>Yearly Billing 25% discount</p>
-      </div>
-      <ul>
-        <li>Unlimited websites</li>
-        <li>100% data ownership</li>
-        <li>Email reports</li>
-      </ul>
-      <a class="button" href="">Start my trial</a>
     </section>
-  </div>
+    <section class="card">
+      <div class="cardTop">
+        <p class="pageviews">Pageviews</p>
+        <hr class="slider">
+        <h2 class="price">$ /month</h2>
+        <div class="pricingOption">
+          <p>Monthly Billing</p>
+          <hr class="toggle">
+          <p>Yearly Billing </p>
+          <p class="discount"> -25%</p>
+        </div>
+      </div>
+      <hr>
+      <div class="cardBottom">
+        <ul>
+          <li><img src="./images/icon-check.svg" class="checkMark"> Unlimited websites</li>
+          <li><img src="./images/icon-check.svg" class="checkMark"> 100% data ownership</li>
+          <li><img src="./images/icon-check.svg" class="checkMark"> Email reports</li>
+        </ul>
+        <a class="button" href="">Start my trial</a>
+      </div>
+    </section>
 
-  <div class="attribution">
+  <section class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Stéphane Baroux</a>.
-  </div>
+  </section>
 </body>
 </html>
