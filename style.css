@@ -94,7 +94,7 @@ body{
     background: linear-gradient(to right, var(--clr-full-slider) 50%, var(--clr-empty-slider) 50%);
 }
 
-.priceSlider::-webkit-priceSlider-thumb{
+.priceSlider::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
     background: url('./images/icon-slider.svg');
@@ -125,6 +125,10 @@ body{
 }
 
 .priceSlider::-moz-range-thumb:active{
+    background-color: var(--clr-slider-bg);
+}
+
+.priceSlider::-webkit-slider-thumb{
     background-color: var(--clr-slider-bg);
 }
 
