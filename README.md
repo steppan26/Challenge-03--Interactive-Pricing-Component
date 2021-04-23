@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-[<img src="./images/screenshotMobile.png" alt="mobile screenshot" height="350"/>](./images/screenshotMobile.png) [<img src="./images/screenshotDesktop.png" alt="desktop screenshot" height="350" style="margin-left: 50px;"/>](./images/screenshotDesktop.png)
+<img src="./images/screenshotMobile.png" alt="mobile screenshot" height="350"/> <img src="./images/screenshotDesktop.png" alt="desktop screenshot" height="350" style="margin-left: 50px;"/>
 
 ### Links
 
