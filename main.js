@@ -11,7 +11,6 @@ function setPrice(){
     let selectorLocation = parseInt(priceSlider.value) - 1;
     pageviews.innerHTML = pageviewsArray[selectorLocation];
     let bgDistance = (selectorLocation * 10) * 2.5;
-    // priceSlider.style.background = "linear-gradient(var(--clr-full-slider) ${bgDistance}, var(--clr-empty-slider))";
     priceSlider.style.background = "linear-gradient(to right, var(--clr-full-slider) " + bgDistance + "%, var(--clr-empty-slider)" + bgDistance + "%)";
 
 

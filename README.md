@@ -1,105 +1,192 @@
-# Frontend Mentor - Interactive pricing component
+# Frontend Mentor - Interactive pricing component solution
 
-![Design preview for the Interactive pricing component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Interactive pricing component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+## Overview
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this interactive pricing component and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
-- Use the slider and toggle to see prices for different page view numbers (details provided below)
+- Use the slider and toggle to see prices for different page view numbers
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-### Page view and pricing totals
+[<img src="./images/screenshotMobile.png" alt="mobile screenshot" height="350"/>](./images/screenshotMobile.png) [<img src="./images/screenshotDesktop.png" alt="desktop screenshot" height="350" style="margin-left: 50px;"/>](./images/screenshotDesktop.png)
 
-Here are the different page view ranges and the corresponding monthly price totals:
+### Links
 
-- 10K pageviews / $8 per month
-- 50K pageviews / $12 per month
-- 100K pageviews / $16 per month
-- 500k pageviews / $24 per month
-- 1M pageviews / $36 per month
+- Solution URL: [FrontEndMentor](https://www.frontendmentor.io/solutions/interactive-pricing-component-htmlcssjs-SYhoNoW3u)
+- Live Site URL: [Github](https://steppan26.github.io/Challenge-03--Interactive-Pricing-Component/)
 
-If the visitor switches the toggle to yearly billing, a 25% discount should be applied to all prices.
+## My process
 
-## Where to find everything
+### Built with
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Javascript
+- Mobile-first workflow
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+### What I learned
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+This project was a really fun exercise which allowed me to develop my CSS skills whilst being to have fun with some javascript.
+I did start out by planning out how I would structure the project before getting stuck into the HTML, but in hindsight I feel that I could have spent more time really breaking it down (particularly figuring out the best way to layout the items and have them change as you scale up). I prefer to get the HTML out early, then move onto the rest, but on this occasion I did have to go back to HTML a couple of times to add wrappers and/or change the structure.
+The CSS was by far the more complicated and time-consuming part of this project. The many different elements which needed their own styling make for a pretty long CSS file. I am sure there are some more efficient ways of writing out the CSS to help reduce the number of lines, but I feel that I have everything in order (based on HTML structure) and it's clean and makes sense.
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+The javascript section of this project was a lot of fun and far simpler than I had anticipated. I feel that the solution I adopted is rather elegant as it only uses a single function with a couple of event listeners.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
 
-## Building your project
+**To see how you can add code snippets, see below:**
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+I am particularly happy with this media querie below, which changes from flexbox to grid, which I then align per item to get them exactly where I want them. Grid is fantastic, and on a bigger project I believe I would likely use grid-areas, which can bring a lot of power and flexibility.
+```css
+@media only screen and (min-width:600px){
+    .heading{
+        font-size: 1.2em;
+        margin: 0;
+    }
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+    .heading > p{
+        width: 100%;
+        font-size: 1rem;
+    }
 
-## Deploying your project
+    .card{
+        max-Width: 512px;
+    }
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+    .cardTop{
+        width: 85%;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr;
+    }
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+    .pageviews{
+        justify-self: self-start;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+    .priceWrapper{
+        justify-self: self-end;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
 
-## Create a custom `README.md`
+    .pageviews,
+    .priceWrapper{
+        font-size: 1rem;
+        margin: 0;
+    }
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+    .sliderContainer{
+        width: 100%;
+        justify-self:baseline;
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        margin: 0;
+    }
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+    .priceSlider{
+        margin: 6% 0;
+    }
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+    .pricingOption{
+        justify-self: flex-end;
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
 
-## Submitting your solution
+    .discountDesktop{
+        display: inline-block;
+        background-color: hsl(14, 92%, 95%);
+        border-radius: 1em;
+        padding: 0.2em 0.5em;
+        margin: 0.85em;
+        color: hsl(15, 100%, 70%);
+        font-size: 0.55rem;
+    }
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+    .discount{
+        display: none;
+    }
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+    .cardBottom{
+        width: 85%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-## Sharing your solution
+    ul{
+        text-align: left;
+    }
 
-There are multiple places you can share your solution:
+}
+```
+I am pleased with the following piece of javascript as I was able to implement all the functionality of this project into this simple function, which gets triggered by event listening.
+```js
+function setPrice(){
+    let selectorLocation = parseInt(priceSlider.value) - 1;
+    pageviews.innerHTML = pageviewsArray[selectorLocation];
+    let bgDistance = (selectorLocation * 10) * 2.5;
+    priceSlider.style.background = "linear-gradient(to right, var(--clr-full-slider) " + bgDistance + "%, var(--clr-empty-slider)" + bgDistance + "%)";
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+    if(toggleButton.checked === true ){
+        let MonthlyPrice = parseInt(priceArrayMonthly[selectorLocation]) / 1.25;
+        let annualPrice = MonthlyPrice * 12;
+        price.innerHTML = "$" + annualPrice.toFixed(2);
+        billingCycle.innerHTML = "/year";
+    } else {
+        price.innerHTML = "$" + parseInt(priceArrayMonthly[selectorLocation]).toFixed(2);
+        billingCycle.innerHTML = "/month";
+    }
+}
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+priceSlider.addEventListener("input", setPrice);
+toggleButton.addEventListener("input", setPrice);
 
-## Got feedback for us?
+```
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+### Continued development
 
-**Have fun building!** 🚀
+For my next project I would like to work on a project which would allow me to make effective us of CSS Grid areas, as I feel I have a good understanding of how it works but I have yet to really use it.
+I would also like to work on some more complex javascript code, I will most likely do my next project using React so I further my knowledge and understanding of building with components and, ultimately, start manipulating 'states'.
+
+### Useful resources
+
+- [Stack Overflow](https://www.stackoverflow.com) - Just a fantastic community where almost every question I have seems to have already been asked and answered. This site was particularly useful within this project to figure out how to ma
+- [W3 Schools: Range Slider](https://www.w3schools.com/howto/howto_js_rangeslider.asp) - This was particularly useful to help me understand how to create and style a range slider.
+- [W3 Schools: Toggle Switch](https://www.w3schools.com/howto/howto_css_switch.asp) - This was particularly useful to help me understand how to create and style a toggle switch.
+
+
+## Author
+
+- Website - [Github Profile](https://github.com/steppan26)
+- Frontend Mentor - [@steppan26](https://www.frontendmentor.io/profile/steppan26)
